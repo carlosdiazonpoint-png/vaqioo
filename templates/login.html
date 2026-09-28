@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block content %}
+<div class="auth-wrapper">
+  <form class="auth-card" method="POST">
+    <div class="brand"><span class="brand-dot"></span>Vaqui</div>
+    <h2>Inicia sesión</h2>
+
+    <label>Correo o celular</label>
+    <input type="text" name="identifier" required autofocus placeholder="tu@correo.com">
+
+    <label>Contraseña</label>
+    <input type="password" name="password" required placeholder="••••••••">
+
+    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+
+    <p class="auth-switch">¿No tienes cuenta? <a href="{{ url_for('auth.register') }}">Regístrate</a></p>
+  </form>
+</div>
+{% endblock %}

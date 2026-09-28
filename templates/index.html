@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}MiBilletera — Tu plata, fácil{% endblock %}
+{% block content %}
+<div class="landing">
+  <div class="landing-card">
+    <div class="brand">
+      <span class="brand-dot"></span>Vaqui
+    </div>
+    <h1>Maneja tu plata<br>desde cualquier lugar</h1>
+    <p class="subtitle">Recarga, transfiere y controla tus movimientos en segundos.</p>
+    <div class="landing-actions">
+      <a href="{{ url_for('auth.register') }}" class="btn btn-primary">Crear cuenta</a>
+      <a href="{{ url_for('auth.login') }}" class="btn btn-ghost">Ya tengo cuenta</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
